@@ -39,3 +39,6 @@ build/
 
 ### Personal Folder ###
 .Sources_To_Learn_Along_The_Way/
+
+### Ignore logs ###
+*.log
