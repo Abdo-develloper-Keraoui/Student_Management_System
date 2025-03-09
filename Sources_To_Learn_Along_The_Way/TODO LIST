@@ -1,5 +1,0 @@
-//TODO:
-Item1:
-    make the admin class, so that it authenticates admin
-    make the admin class, so that it allows admin to do CRUD operations
-    make the admin class, so that it reads necessary data from config file
