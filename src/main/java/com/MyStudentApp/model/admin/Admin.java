@@ -3,15 +3,12 @@ package com.MyStudentApp.model.admin;
 //TODO: Add Admin Roles and CRUD Operations
 
 
-import com.MyStudentApp.model.security.PasswordHasher;
 import com.MyStudentApp.model.student.Student;
 import com.MyStudentApp.model.student.DegreeProgram;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import static com.MyStudentApp.model.security.AdminAuthenticator.authenticateAdmin;
 
 public class Admin {
     public static int StudentIDCount = 555209;
@@ -70,7 +67,7 @@ public class Admin {
 
         //adding the generated studentID and email
 
-        student.setStudentID(StudentIDCount, "FSTS");
+        student.setStudentID(StudentIDCount);
         student.setEmail();
 
         return student;
