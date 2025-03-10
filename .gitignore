@@ -40,3 +40,6 @@ build/
 
 ### Ignore logs ###
 *.log
+
+### Tests ###
+test/
