@@ -109,9 +109,8 @@ public class Student {
         return studentID;
     }
 
-    public void setStudentID(int IDCount, String CollegeInitials) {
-
-        this.studentID = GenerateStudentID(IDCount, CollegeInitials);
+    public void setStudentID(int IDCount) {
+        this.studentID = GenerateStudentID(IDCount);
     }
 
     //degreeProgram
