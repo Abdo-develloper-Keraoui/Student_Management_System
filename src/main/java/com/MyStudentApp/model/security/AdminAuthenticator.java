@@ -2,9 +2,11 @@ package com.MyStudentApp.model.security;
 import com.MyStudentApp.model.admin.Admin;
 import com.MyStudentApp.model.security.ConfigLoader;
 
+import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.util.Scanner;
+
 
 
 import static com.MyStudentApp.model.security.SHA256WithSaltVerification.*;
@@ -20,7 +22,7 @@ public class AdminAuthenticator {
         return EnteredUsername.equals(StoredUserName);
     }
 
-    public static boolean authenticateAdmin(Admin admin) throws NoSuchAlgorithmException {
+    public static boolean authenticateAdmin(Admin admin) throws NoSuchAlgorithmException, IOException {
         Scanner scanner = new Scanner(System.in);
         // Load configuration
         ConfigLoader configLoader = new ConfigLoader("admin.properties");
@@ -47,8 +49,8 @@ public class AdminAuthenticator {
                 EnteredUserName = scanner.nextLine();
                 continue;
             }
-
             System.out.println("Please Enter the password to verify: ");
+
             PasswordToVerify = scanner.nextLine();
 
             if(verifyPassword(PasswordToVerify, storedHash, storedSalt)){
